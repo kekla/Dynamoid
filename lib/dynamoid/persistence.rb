@@ -314,7 +314,7 @@ module Dynamoid
           when :raw
             !value.nil? ? value : nil
           when :boolean
-            !value.nil? ? value.to_s[0] : nil
+            !value.nil? ? value : nil
           else
             raise ArgumentError, "Unknown type #{options[:type]}"
         end
